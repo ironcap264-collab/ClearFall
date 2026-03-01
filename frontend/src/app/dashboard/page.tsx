@@ -43,7 +43,7 @@ function TokenListCard({ userAddress }: { userAddress: `0x${string}` }) {
 
   return (
     <div className="card p-6 mb-8 bg-gradient-to-br from-primary-900/20 to-purple-900/20 border-primary-500/20">
-      <h3 className="font-bold mb-4 flex items-center gap-2">
+      <h3 className="font-bold mb-4 flex items-center gap-2 font-display">
         <Coins className="w-5 h-5 text-primary-400" />
         My Deployed Tokens
       </h3>
@@ -402,7 +402,7 @@ export default function DashboardPage() {
           <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-primary-500/10 flex items-center justify-center">
             <LayoutDashboard className="w-10 h-10 text-primary-400" />
           </div>
-          <h1 className="text-3xl font-bold mb-4">Dashboard</h1>
+          <h1 className="text-3xl font-bold mb-4 font-display">Dashboard</h1>
           <p className="text-gray-400 mb-8">Connect your wallet to manage your auctions</p>
           <ConnectButton />
         </div>
@@ -415,7 +415,7 @@ export default function DashboardPage() {
       {/* Header */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
-          <h1 className="text-4xl font-bold mb-2">
+          <h1 className="text-4xl font-bold mb-2 font-display">
             <span className="gradient-text">My</span> Dashboard
           </h1>
           <p className="text-gray-400">Manage your auctions and track performance</p>
@@ -452,7 +452,7 @@ export default function DashboardPage() {
 
       {/* Participated Auctions Section */}
       <div>
-        <h2 className="text-2xl font-bold mb-6">Participated Auctions</h2>
+        <h2 className="text-2xl font-bold mb-6 font-display">Participated Auctions</h2>
         {isLoadingParticipated ? (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {[...Array(2)].map((_, i) => (
@@ -480,7 +480,7 @@ export default function DashboardPage() {
 
       {/* My Created Auctions */}
       <div>
-        <h2 className="text-2xl font-bold mb-6">Created Auctions</h2>
+        <h2 className="text-2xl font-bold mb-6 font-display">Created Auctions</h2>
 
         {isLoadingCreator ? (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -515,7 +515,7 @@ export default function DashboardPage() {
 
       {/* Quick Guide */}
       <div className="card p-8">
-        <h2 className="text-2xl font-bold mb-6">Quick Guide</h2>
+        <h2 className="text-2xl font-bold mb-6 font-display">Quick Guide</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {[
             {

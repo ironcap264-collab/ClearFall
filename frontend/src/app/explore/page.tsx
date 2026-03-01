@@ -37,7 +37,7 @@ export default function ExplorePage() {
       {/* Header */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
         <div>
-          <h1 className="text-4xl font-bold mb-2">
+          <h1 className="text-4xl font-bold mb-2 font-display">
             <span className="gradient-text">Explore</span> Auctions
           </h1>
           <p className="text-gray-400">
@@ -56,7 +56,7 @@ export default function ExplorePage() {
       </div>
 
       {/* Filters Bar */}
-      <div className="card p-4">
+      <div className="card p-4 border-white/5 hover:border-white/10 transition-colors duration-300">
         <div className="flex flex-col lg:flex-row gap-4">
           {/* Search */}
           <div className="flex-1 relative">

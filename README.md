@@ -85,7 +85,12 @@ graph TD
 
 ### Core Components
 
-1.  **Frontend Interface**: A responsive Next.js application using `wagmi` and `RainbowKit` for wallet management.
+1.  **Frontend Interface**: A responsive Next.js application using `wagmi` and `RainbowKit` for wallet management. Features include:
+    *   **Explore** – Browse and filter live auctions
+    *   **Create** – Launch new tokens and auctions with AI-enhanced descriptions
+    *   **Dashboard** – Manage your auctions, deposits, and withdrawals
+    *   **Faucet** – Mint free test tokens (CFT) on Polygon Amoy
+    *   **AI Assistant** – In-app help for Dutch auctions and platform usage
 2.  **Factory Contract**: A master contract that deploys individual, isolated auction contracts.
 3.  **Auction Instance**: The logic handler for a specific token sale.
 4.  **Vault**: A secure holding contract that escrows tokens and funds until settlement.
@@ -194,8 +199,11 @@ Follow these steps to run ClearFall locally or deploy to testnet.
     Create a `.env.local` file in `frontend/`:
     ```env
     NEXT_PUBLIC_FACTORY_ADDRESS=0x... (Output from deploy script)
+    NEXT_PUBLIC_TOKEN_FACTORY_ADDRESS=0x... (Output from deploy script)
     NEXT_PUBLIC_RPC_URL=https://rpc-amoy.polygon.technology
     NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID=your_id
+    NEXT_PUBLIC_PINATA_JWT=your_jwt (Optional, for IPFS metadata)
+    NEXT_PUBLIC_GEMINI_API_KEY=your_key (Optional, for AI assistant)
     ```
 
 ### Deployment
@@ -231,8 +239,9 @@ Follow these steps to run ClearFall locally or deploy to testnet.
 *   **Language**: Solidity 0.8.20
 *   **Framework**: Hardhat
 *   **Frontend**: Next.js 14 (App Router)
-*   **Styling**: Tailwind CSS
+*   **Styling**: Tailwind CSS, Framer Motion
 *   **Web3 Libs**: Viem, Wagmi, RainbowKit
+*   **Fonts**: Inter, Space Grotesk
 
 ### Contract Limits (Configurable)
 *   **Max Duration**: 30 Days
@@ -253,8 +262,26 @@ ClearFall implements standard security patterns:
 
 ### Known Limitations (Beta)
 *   This is **experimental software** on a testnet.
-*   The `AuctionFactory` is currently large and requires `viaIR` compilation.
+*   The `AuctionFactory` is currently large and may require `viaIR` compilation.
 *   Audits have **not** been performed by a third-party firm.
+
+---
+
+## 📁 Project Structure
+
+```
+clearFall/
+├── contracts/          # Solidity smart contracts
+├── scripts/            # Deploy and utility scripts
+├── frontend/           # Next.js application
+│   ├── src/
+│   │   ├── app/        # Pages (App Router)
+│   │   ├── components/ # React components
+│   │   ├── hooks/      # Wallet & auction hooks
+│   │   └── lib/        # ABIs, utils, wagmi config
+│   └── public/
+└── README.md
+```
 
 ---
 
@@ -262,7 +289,7 @@ ClearFall implements standard security patterns:
 
 This project is licensed under the **MIT License**.
 
-Copyright (c) 2024 ClearFall Protocol.
+Copyright (c) 2025 ClearFall Protocol.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

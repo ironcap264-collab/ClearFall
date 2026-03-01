@@ -27,6 +27,8 @@ ClearFall is a decentralized Dutch auction platform for fair token distribution.
 - **Uniform Clearing Price**: All winners pay the same price
 - **MEV Protected**: No front-running possible
 - **IPFS Metadata**: Auction details stored on decentralized storage
+- **Testnet Faucet**: Mint free CFT tokens for testing
+- **AI Assistant**: In-app chatbot for platform help
 
 ### Auction Phases
 

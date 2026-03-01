@@ -32,7 +32,8 @@
 6.  [Getting Started](#-getting-started)
 7.  [Technical Specifications](#-technical-specifications)
 8.  [Security & Auditing](#-security--auditing)
-9.  [License](#-license)
+9.  [Project Structure](#-project-structure)
+10. [License](#-license)
 
 ---
 

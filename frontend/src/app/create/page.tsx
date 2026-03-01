@@ -410,7 +410,7 @@ export default function CreateAuctionPage() {
           <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-green-500/20 flex items-center justify-center">
             <CheckCircle className="w-10 h-10 text-green-500" />
           </div>
-          <h2 className="text-3xl font-bold mb-3">Auction Created!</h2>
+          <h2 className="text-3xl font-bold mb-3 font-display">Auction Created!</h2>
           <p className="text-gray-400 mb-6">
             Your auction has been created successfully on the blockchain.
           </p>
@@ -465,7 +465,7 @@ export default function CreateAuctionPage() {
       {/* Header - Matching Dashboard Style */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
-           <h1 className="text-4xl font-bold mb-2">
+           <h1 className="text-4xl font-bold mb-2 font-display">
              <span className="gradient-text">Launch</span> New Project
            </h1>
            <p className="text-gray-400">Deploy a new token or start a Dutch auction</p>

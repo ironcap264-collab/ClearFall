@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 import { useAccount, useWriteContract, useWaitForTransactionReceipt, useReadContract, useReadContracts } from 'wagmi';
 import { parseEther, formatEther } from 'viem';
 import { ConnectButton } from '@rainbow-me/rainbowkit';
@@ -282,7 +283,7 @@ export default function FaucetPage() {
         <div className="w-20 h-20 mx-auto rounded-full bg-gradient-to-br from-primary-500/20 to-polygon/20 flex items-center justify-center ring-1 ring-white/10">
           <Coins className="w-10 h-10 text-primary-400" />
         </div>
-        <h1 className="text-4xl font-bold">
+        <h1 className="text-4xl font-bold font-display">
           <span className="gradient-text">Testnet</span> Faucet & Assets
         </h1>
         <p className="text-gray-400 max-w-lg mx-auto">
@@ -344,10 +345,10 @@ export default function FaucetPage() {
                       <p className="text-gray-400 text-sm mb-6 max-w-md mx-auto">
                         You haven't created any custom tokens yet. Launch your own token to start building your ecosystem.
                       </p>
-                      <a href="/create" className="btn-primary inline-flex items-center gap-2">
+                      <Link href="/create" className="btn-primary inline-flex items-center gap-2">
                          <PlusIcon className="w-4 h-4" />
                          Create New Token
-                      </a>
+                      </Link>
                    </div>
                 )}
              </div>

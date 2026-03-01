@@ -165,7 +165,7 @@ export default function ExplorePage() {
           <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-primary-500/10 flex items-center justify-center">
             <Sparkles className="w-10 h-10 text-primary-400" />
           </div>
-          <h3 className="text-xl font-semibold mb-2">No Auctions Found</h3>
+          <h3 className="text-xl font-semibold mb-2 font-display">No Auctions Found</h3>
           <p className="text-gray-400 mb-6">
             {searchQuery
               ? 'Try adjusting your search or filters'

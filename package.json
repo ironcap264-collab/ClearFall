@@ -1,0 +1,31 @@
+{
+  "name": "clearfall-protocol",
+  "version": "1.0.0",
+  "description": "Decentralized Dutch Auction Protocol on Polygon",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "deploy:local": "hardhat run scripts/deploy.ts --network localhost",
+    "deploy:amoy": "hardhat run scripts/deploy.ts --network amoy",
+    "deploy:polygon": "hardhat run scripts/deploy.ts --network polygon",
+    "node": "hardhat node"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.1",
+    "dotenv": "^17.2.3"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "@types/node": "^20.10.0",
+    "hardhat": "^2.19.4",
+    "typescript": "^5.3.3"
+  },
+  "keywords": [
+    "dutch-auction",
+    "polygon",
+    "defi",
+    "web3"
+  ],
+  "author": "ClearFall Team",
+  "license": "MIT"
+}

@@ -32,7 +32,7 @@ export function Navbar() {
               <div className="absolute inset-0 bg-gradient-to-br from-primary-400 to-polygon rounded-xl opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-300" />
             </div>
             <div className="flex flex-col">
-              <span className="text-xl font-bold gradient-text">ClearFall</span>
+              <span className="text-xl font-bold gradient-text font-display">ClearFall</span>
               <span className="text-[10px] text-gray-500 uppercase tracking-wider">Protocol</span>
             </div>
           </Link>
@@ -174,7 +174,7 @@ export function Navbar() {
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div className="md:hidden pb-4 animate-fade-in">
+          <div className="md:hidden pb-4 animate-fade-in animate-slide-down">
             <div className="flex flex-col gap-2 p-2 rounded-2xl bg-black/20">
               {navLinks.map((link) => {
                 const Icon = link.icon;

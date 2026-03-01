@@ -36,7 +36,7 @@ export default function HomePage() {
             <span className="text-sm font-medium text-primary-300">Live on Polygon Amoy</span>
           </div>
 
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight font-display">
             <span className="gradient-text-animated">Fair Price</span>
             <br />
             <span className="text-white">Discovery Protocol</span>
@@ -82,16 +82,16 @@ export default function HomePage() {
       {/* Stats Section */}
       <section className="grid grid-cols-1 md:grid-cols-4 gap-6">
         {[
-          { label: 'Total Auctions', value: count?.toString() || '0', icon: TrendingDown, color: 'primary' },
-          { label: 'Network', value: 'Polygon', icon: Zap, color: 'yellow' },
-          { label: 'Protection', value: 'Commit-Reveal', icon: Lock, color: 'green' },
-          { label: 'Status', value: 'Live', icon: Clock, color: 'blue' },
+          { label: 'Total Auctions', value: count?.toString() || '0', icon: TrendingDown, iconBg: 'bg-primary-500/10', iconColor: 'text-primary-400' },
+          { label: 'Network', value: 'Polygon', icon: Zap, iconBg: 'bg-yellow-500/10', iconColor: 'text-yellow-400' },
+          { label: 'Protection', value: 'Commit-Reveal', icon: Lock, iconBg: 'bg-green-500/10', iconColor: 'text-green-400' },
+          { label: 'Status', value: 'Live', icon: Clock, iconBg: 'bg-blue-500/10', iconColor: 'text-blue-400' },
         ].map((stat, i) => {
           const Icon = stat.icon;
           return (
             <div key={i} className="stat-card group hover:scale-[1.02] transition-transform duration-300">
-              <div className={`w-12 h-12 mx-auto mb-4 rounded-2xl bg-${stat.color}-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                <Icon className={`w-6 h-6 text-${stat.color}-400`} />
+              <div className={`w-12 h-12 mx-auto mb-4 rounded-2xl ${stat.iconBg} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                <Icon className={`w-6 h-6 ${stat.iconColor}`} />
               </div>
               <p className="text-3xl font-bold gradient-text mb-1">{stat.value}</p>
               <p className="text-sm text-gray-400">{stat.label}</p>
@@ -104,7 +104,7 @@ export default function HomePage() {
       <section>
         <div className="flex items-center justify-between mb-8">
           <div>
-            <h2 className="text-3xl font-bold mb-2">Latest Auctions</h2>
+            <h2 className="text-3xl font-bold mb-2 font-display">Latest Auctions</h2>
             <p className="text-gray-400">Discover ongoing and upcoming token sales</p>
           </div>
           <div className="flex items-center gap-3">
@@ -157,7 +157,7 @@ export default function HomePage() {
       {/* How It Works */}
       <section className="card p-10">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4">How It Works</h2>
+          <h2 className="text-3xl font-bold mb-4 font-display">How It Works</h2>
           <p className="text-gray-400 max-w-xl mx-auto">
             ClearFall uses a Dutch auction mechanism with commit-reveal for fair price discovery
           </p>
@@ -170,28 +170,32 @@ export default function HomePage() {
               title: 'Create',
               description: 'Creator deposits tokens and sets auction parameters like price range and duration',
               icon: Plus,
-              color: 'primary',
+              iconBg: 'bg-primary-500/10',
+              iconColor: 'text-primary-400',
             },
             {
               step: 2,
               title: 'Commit',
               description: 'Bidders submit hidden commitments with locked funds during the commit phase',
               icon: Lock,
-              color: 'blue',
+              iconBg: 'bg-blue-500/10',
+              iconColor: 'text-blue-400',
             },
             {
               step: 3,
               title: 'Reveal',
               description: 'Bidders reveal their bid quantities to determine the clearing price',
               icon: Shield,
-              color: 'yellow',
+              iconBg: 'bg-yellow-500/10',
+              iconColor: 'text-yellow-400',
             },
             {
               step: 4,
               title: 'Claim',
               description: 'Winners claim tokens at the uniform clearing price with excess refunded',
               icon: Sparkles,
-              color: 'green',
+              iconBg: 'bg-green-500/10',
+              iconColor: 'text-green-400',
             },
           ].map((item, i) => {
             const Icon = item.icon;
@@ -202,8 +206,8 @@ export default function HomePage() {
                   <div className="hidden md:block absolute top-8 left-[60%] w-[80%] h-0.5 bg-gradient-to-r from-gray-700 to-transparent" />
                 )}
 
-                <div className={`w-16 h-16 mx-auto mb-4 rounded-2xl bg-${item.color}-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 relative z-10`}>
-                  <Icon className={`w-7 h-7 text-${item.color}-400`} />
+                <div className={`w-16 h-16 mx-auto mb-4 rounded-2xl ${item.iconBg} flex items-center justify-center group-hover:scale-110 transition-transform duration-300 relative z-10`}>
+                  <Icon className={`w-7 h-7 ${item.iconColor}`} />
                 </div>
 
                 <div className="text-xs font-bold text-gray-500 mb-2">STEP {item.step}</div>
@@ -250,7 +254,7 @@ export default function HomePage() {
 
       {/* CTA Section */}
       <section className="card p-12 text-center bg-gradient-to-br from-primary-500/10 to-polygon/10">
-        <h2 className="text-3xl font-bold mb-4">Ready to Launch Your Token?</h2>
+        <h2 className="text-3xl font-bold mb-4 font-display">Ready to Launch Your Token?</h2>
         <p className="text-gray-400 max-w-xl mx-auto mb-8">
           Create a Dutch auction in minutes. Fair price discovery, MEV protection, and seamless distribution.
         </p>

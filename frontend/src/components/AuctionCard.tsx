@@ -58,7 +58,7 @@ export function AuctionCard({ address }: AuctionCardProps) {
   const isHot = Number(totalDemand) > 0;
 
   return (
-    <Link href={`/auction/${address}`}>
+    <Link href={`/auction/${address}`} className="block focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900 rounded-2xl">
       <div className="card card-hover p-6 cursor-pointer group h-full flex flex-col">
         {/* Header with Image/Gradient */}
         <div className="relative h-32 -mx-6 -mt-6 mb-4 rounded-t-2xl overflow-hidden">

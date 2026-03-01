@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Inter, Space_Grotesk } from 'next/font/google';
+import Link from 'next/link';
 import './globals.css';
 import { Providers } from './providers';
 import { Navbar } from '@/components/Navbar';
@@ -13,6 +14,7 @@ const inter = Inter({
 const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
   variable: '--font-space',
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
@@ -42,7 +44,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable}`}>
-      <body className={inter.className}>
+      <body className={`${inter.className} ${spaceGrotesk.variable}`}>
         <Providers>
           <div className="min-h-screen flex flex-col relative">
             {/* Floating Orbs Background */}
@@ -77,29 +79,29 @@ export default function RootLayout({
 
                   {/* Quick Links */}
                   <div>
-                    <h4 className="font-semibold text-white mb-4">Quick Links</h4>
+                    <h4 className="font-semibold text-white mb-4 font-display">Quick Links</h4>
                     <ul className="space-y-2 text-sm">
                       <li>
-                        <a href="/explore" className="text-gray-400 hover:text-white transition-colors">
+                        <Link href="/explore" className="text-gray-400 hover:text-white transition-colors">
                           Explore Auctions
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a href="/create" className="text-gray-400 hover:text-white transition-colors">
+                        <Link href="/create" className="text-gray-400 hover:text-white transition-colors">
                           Create Auction
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a href="/dashboard" className="text-gray-400 hover:text-white transition-colors">
+                        <Link href="/dashboard" className="text-gray-400 hover:text-white transition-colors">
                           Dashboard
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                   </div>
 
                   {/* Resources */}
                   <div>
-                    <h4 className="font-semibold text-white mb-4">Resources</h4>
+                    <h4 className="font-semibold text-white mb-4 font-display">Resources</h4>
                     <ul className="space-y-2 text-sm">
                       <li>
                         <a
@@ -128,7 +130,7 @@ export default function RootLayout({
                 {/* Bottom Bar */}
                 <div className="divider my-8" />
                 <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-500">
-                  <p>2024 ClearFall Protocol. Built on Polygon.</p>
+                  <p>© 2025 ClearFall Protocol. Built on Polygon.</p>
                   <div className="flex items-center gap-4">
                     <div className="flex items-center gap-2">
                       <div className="w-2 h-2 rounded-full bg-green-500" />

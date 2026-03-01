@@ -307,7 +307,7 @@ export default function FaucetPage() {
           {/* User Tokens Column - Full Width */}
           <div className="space-y-6">
              <div className="flex items-center justify-between">
-                <h2 className="text-xl font-bold flex items-center gap-2">
+                <h2 className="text-xl font-bold flex items-center gap-2 font-display">
                    <ShieldCheck className="w-5 h-5 text-green-400" />
                    My Created Assets
                 </h2>

@@ -264,8 +264,8 @@ export default function AuctionDetailPage() {
   return (
     <div className="max-w-5xl mx-auto space-y-8">
       {/* Back Button */}
-      <Link href="/explore" className="inline-flex items-center text-gray-400 hover:text-white transition-colors">
-        <ArrowLeft className="w-4 h-4 mr-2" />
+      <Link href="/explore" className="inline-flex items-center text-gray-400 hover:text-white transition-colors group/back">
+        <ArrowLeft className="w-4 h-4 mr-2 group-hover/back:-translate-x-0.5 transition-transform" />
         Back to Auctions
       </Link>
 
@@ -293,7 +293,7 @@ export default function AuctionDetailPage() {
 
           {/* Title Overlay */}
           <div className="absolute bottom-6 left-6 right-6">
-            <h1 className="text-3xl md:text-4xl font-bold mb-2">{title}</h1>
+            <h1 className="text-3xl md:text-4xl font-bold mb-2 font-display">{title}</h1>
             {description && <p className="text-gray-300">{description}</p>}
           </div>
         </div>

@@ -206,7 +206,6 @@ export function GlobalAIHelper() {
             <>
                <MessageSquare className="w-6 h-6 absolute transition-all duration-300 group-hover:opacity-0 group-hover:scale-50" />
                <Sparkles className="w-6 h-6 absolute opacity-0 scale-50 transition-all duration-300 group-hover:opacity-100 group-hover:scale-100" />
-               <span className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full border-2 border-black animate-pulse" />
             </>
          )}
        </button>

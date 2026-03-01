@@ -428,19 +428,19 @@ export default function DashboardPage() {
 
       {/* Stats Overview */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div className="stat-card">
+        <div className="stat-card hover:scale-[1.02] transition-transform duration-300">
           <TrendingUp className="w-8 h-8 text-primary-400 mx-auto mb-3" />
           <p className="text-4xl font-bold gradient-text mb-1">{creatorAuctions?.length || 0}</p>
           <p className="text-gray-400">Created Auctions</p>
         </div>
-        <div className="stat-card">
+        <div className="stat-card hover:scale-[1.02] transition-transform duration-300">
           <Users className="w-8 h-8 text-blue-400 mx-auto mb-3" />
           <p className="text-4xl font-bold text-blue-400 mb-1">
             {participatedAuctions?.length || 0}
           </p>
           <p className="text-gray-400">Participated</p>
         </div>
-        <div className="stat-card">
+        <div className="stat-card hover:scale-[1.02] transition-transform duration-300">
           <CheckCircle className="w-8 h-8 text-green-400 mx-auto mb-3" />
           <p className="text-4xl font-bold text-green-400 mb-1">0</p>
           <p className="text-gray-400">Won</p>

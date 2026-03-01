@@ -243,7 +243,7 @@ export default function HomePage() {
         ].map((feature, i) => {
           const Icon = feature.icon;
           return (
-            <div key={i} className={`card p-8 bg-gradient-to-br ${feature.gradient} hover:scale-[1.02] transition-transform duration-300`}>
+            <div key={i} className={`card p-8 bg-gradient-to-br ${feature.gradient} hover:scale-[1.02] hover:border-primary-500/20 transition-all duration-300`}>
               <Icon className="w-10 h-10 text-white mb-4" />
               <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
               <p className="text-gray-400">{feature.description}</p>

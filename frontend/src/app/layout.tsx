@@ -129,7 +129,7 @@ export default function RootLayout({
 
                 {/* Bottom Bar */}
                 <div className="divider my-8" />
-                <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-500">
+                    <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-500">
                   <p>© 2025 ClearFall Protocol. Built on Polygon.</p>
                   <div className="flex items-center gap-4">
                     <div className="flex items-center gap-2">

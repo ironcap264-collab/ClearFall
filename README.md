@@ -9,6 +9,12 @@
 </p>
 
 <p align="center">
+  <a href="USER_GUIDE.md">📖 User Guide</a>
+  &nbsp;•&nbsp;
+  <a href="https://polygon.technology/">Polygon</a>
+</p>
+
+<p align="center">
   <a href="https://polygon.technology/">
     <img src="https://img.shields.io/badge/Polygon-8247E5?style=for-the-badge&logo=polygon&logoColor=white" alt="Polygon" />
   </a>
@@ -33,7 +39,8 @@
 7.  [Technical Specifications](#-technical-specifications)
 8.  [Security & Auditing](#-security--auditing)
 9.  [Project Structure](#-project-structure)
-10. [License](#-license)
+10. [FAQ](#-faq)
+11. [License](#-license)
 
 ---
 
@@ -283,8 +290,6 @@ clearFall/
 │   └── public/
 └── README.md
 ```
-
----
 
 ## 📜 License
 

@@ -9,10 +9,11 @@ A complete guide on how to interact with the ClearFall Dutch Auction platform.
 1. [Overview](#overview)
 2. [For Auction Creators](#for-auction-creators)
 3. [For Bidders](#for-bidders)
-4. [Example Scenario](#example-scenario)
-5. [Why Commit-Reveal](#why-commit-reveal)
-6. [Smart Contract Functions](#smart-contract-functions)
-7. [Troubleshooting](#troubleshooting)
+4. [Faucet & Test Tokens](#faucet--test-tokens)
+5. [Example Scenario](#example-scenario)
+6. [Why Commit-Reveal](#why-commit-reveal)
+7. [Smart Contract Functions](#smart-contract-functions)
+8. [Troubleshooting](#troubleshooting)
 
 ---
 
@@ -45,11 +46,13 @@ ClearFall is a decentralized Dutch auction platform for fair token distribution.
 
 ## For Auction Creators
 
-### Step 1: Create an Auction
+### Step 1: Create an Auction (or Token First)
 
 1. Connect your wallet on the website
 2. Go to the **Create** page
-3. Fill in the auction details:
+3. **Option A – Create Token First**: If you don't have a token, use the "Create Token First" tab to deploy an ERC20 token (name, symbol, supply). Then switch to the auction tab and paste the new token address.
+4. **Option B – Use Existing Token**: If you already have a token address, paste it in the auction form.
+5. Fill in the auction details:
 
 | Field | Description | Example |
 |-------|-------------|---------|
@@ -63,6 +66,8 @@ ClearFall is a decentralized Dutch auction platform for fair token distribution.
 | Start Time | When the auction begins | Tomorrow 12:00 PM |
 | Commit Duration | How long users can submit bids | 24 hours (86400 seconds) |
 | Reveal Duration | How long users can reveal bids | 12 hours (43200 seconds) |
+
+**Pro tip**: Use the **"Enhance with AI"** button to improve your auction title and description.
 
 **Advanced Options:**
 - Reserve Price: Minimum clearing price (auction fails if below)
@@ -217,6 +222,28 @@ Click **"Claim Tokens"** to:
 
 ---
 
+## Faucet & Test Tokens
+
+### Get Test MATIC
+
+For gas fees on Polygon Amoy, get free MATIC from:
+- [Polygon Faucet](https://faucet.polygon.technology/)
+- [Amoy Explorer](https://amoy.polygonscan.com/)
+
+### Get Test CFT Tokens
+
+1. Go to the **Faucet** page
+2. Connect your wallet
+3. Click **"Mint Now"** to receive 1,000 CFT tokens
+4. **Cooldown**: 24 hours between mints per address
+5. Use CFT to test auctions without creating your own token
+
+### Your Created Tokens
+
+If you created tokens via the **Create** page, they appear in the Faucet under **"My Created Assets"**. You can add them to your wallet and view balances there.
+
+---
+
 ## Example Scenario
 
 ### Auction Setup
@@ -362,6 +389,19 @@ Alice loses         ✗        Alice reveals 50 ─────────► A
 For Polygon Amoy testnet, get free MATIC from:
 - https://faucet.polygon.technology/
 - https://amoy.polygonscan.com/
+
+---
+
+## AI Assistant
+
+Use the floating chat button (bottom-right) to ask questions about the platform:
+
+- **"How do I create a Dutch Auction?"** – Step-by-step guide
+- **"How to create a new Token?"** – Token deployment walkthrough
+- **"What is the Faucet for?"** – Explains test tokens
+- **"Explain Dutch Auction mechanism"** – Technical overview
+
+The assistant can answer other questions about ClearFall, auctions, and bidding.
 
 ---
 

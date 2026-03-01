@@ -51,10 +51,10 @@ export default function HomePage() {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link href="/create" className="btn-primary inline-flex items-center gap-2 text-lg px-8 py-4">
+            <Link href="/create" className="btn-primary inline-flex items-center gap-2 text-lg px-8 py-4 group/btn">
               <Plus className="w-5 h-5" />
               Create Auction
-              <ArrowRight className="w-4 h-4 ml-1" />
+              <ArrowRight className="w-4 h-4 ml-1 group-hover/btn:translate-x-0.5 transition-transform" />
             </Link>
             <Link href="/explore" className="btn-secondary inline-flex items-center gap-2 text-lg px-8 py-4">
               Explore Auctions
